@@ -1,2 +1,14 @@
 # paperpic
-Document image viewer &amp; editor: zoom, rotate, perspective, brightness/contrast, B&amp;W and shadow removal. Vue 3.
+
+Document image viewer & editor: zoom, rotate, perspective correction,
+brightness/contrast, black & white and shadow removal.
+
+| Package | Status |
+|---|---|
+| `vue-paperpic` | In development |
+
+> Work in progress. Not ready for production.
+
+## License
+
+MIT
