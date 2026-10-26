@@ -17,9 +17,9 @@
     "changeset": "changeset"
   },
   "devDependencies": {
-    "@changesets/cli": "^3.0.3",
-    "@antfu/eslint-config": "^10.0.0",
-    "eslint": "^10.13.0",
+    "@antfu/eslint-config": "catalog:",
+    "@changesets/cli": "catalog:",
+    "eslint": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:"
   }
