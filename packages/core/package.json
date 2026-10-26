@@ -1,0 +1,42 @@
+{
+  "name": "@paperpic/core",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "Framework-agnostic core of PaperPic: image processing for document photos.",
+  "license": "MIT",
+  "homepage": "https://paperpic.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paperpic/paperpic.git",
+    "directory": "packages/core"
+  },
+  "bugs": "https://github.com/paperpic/paperpic/issues",
+  "keywords": [
+    "document",
+    "image",
+    "perspective-correction",
+    "threshold",
+    "image-processing"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "tsdown": "catalog:",
+    "typescript": "catalog:"
+  }
+}
