@@ -1,6 +1,6 @@
 import type { Theme } from 'vitepress'
+import { PaperPic } from '@paperpic/vue'
 import DefaultTheme from 'vitepress/theme'
-import { PaperPic } from 'vue-paperpic'
 
 export default {
   extends: DefaultTheme,

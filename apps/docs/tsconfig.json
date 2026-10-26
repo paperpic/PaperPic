@@ -2,7 +2,7 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "paths": {
-      "vue-paperpic": ["../../packages/vue/src/index.ts"],
+      "@paperpic/vue": ["../../packages/vue/src/index.ts"],
       "@paperpic/core": ["../../packages/core/src/index.ts"]
     },
     "noEmit": true

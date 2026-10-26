@@ -9,12 +9,12 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "vitepress": "catalog:",
-    "vue": "catalog:",
-    "vue-paperpic": "workspace:*"
+    "@paperpic/vue": "workspace:*",
+    "vitepress": "1.6.4",
+    "vue": "3.5.44"
   },
   "devDependencies": {
-    "typescript": "catalog:",
-    "vue-tsc": "catalog:"
+    "typescript": "6.0.3",
+    "vue-tsc": "3.3.13"
   }
 }

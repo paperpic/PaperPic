@@ -6,7 +6,7 @@ brightness/contrast, black & white and shadow removal.
 | Package | Status |
 |---|---|
 | `@paperpic/core` | In development |
-| `vue-paperpic` | In development |
+| `@paperpic/vue` | In development |
 
 > Work in progress. Not ready for production.
 

@@ -4,7 +4,7 @@
   "private": true,
   "packageManager": "pnpm@12.15.0",
   "engines": {
-    "node": ">=24"
+    "node": ">=26"
   },
   "scripts": {
     "dev": "pnpm --filter docs dev",
@@ -17,10 +17,10 @@
     "changeset": "changeset"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "catalog:",
-    "@changesets/cli": "catalog:",
-    "eslint": "catalog:",
-    "typescript": "catalog:",
-    "vitest": "catalog:"
+    "@antfu/eslint-config": "10.0.0",
+    "@changesets/cli": "3.0.3",
+    "eslint": "10.13.0",
+    "typescript": "6.0.3",
+    "vitest": "5.0.5"
   }
 }

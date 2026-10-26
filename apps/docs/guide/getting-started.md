@@ -5,17 +5,17 @@ PaperPic is in early development. The API below is a placeholder and will change
 ## Installation
 
 ```sh
-pnpm add vue-paperpic
+pnpm add @paperpic/vue
 ```
 
-`vue-paperpic` requires Vue 3.5 or newer.
+`@paperpic/vue` requires Vue 3.5 or newer.
 
 ## Usage
 
 ```vue
 <script setup lang="ts">
-import { PaperPic } from 'vue-paperpic'
-import 'vue-paperpic/style.css'
+import { PaperPic } from '@paperpic/vue'
+import '@paperpic/vue/style.css'
 </script>
 
 <template>

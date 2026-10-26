@@ -18,7 +18,7 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
-        'vue-paperpic': source('../../../packages/vue/src/index.ts'),
+        '@paperpic/vue': source('../../../packages/vue/src/index.ts'),
         '@paperpic/core': source('../../../packages/core/src/index.ts'),
       },
     },
