@@ -1,0 +1,58 @@
+{
+  "name": "vue-paperpic",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "Vue 3 components to view and edit document images with PaperPic.",
+  "license": "MIT",
+  "homepage": "https://paperpic.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paperpic/paperpic.git",
+    "directory": "packages/vue"
+  },
+  "bugs": "https://github.com/paperpic/paperpic/issues",
+  "keywords": [
+    "document",
+    "image",
+    "perspective-correction",
+    "threshold",
+    "image-processing",
+    "vue",
+    "vue3"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vite build && vue-tsc -p tsconfig.build.json",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "dependencies": {
+    "@paperpic/core": "workspace:^"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "catalog:",
+    "@vue/test-utils": "catalog:",
+    "happy-dom": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vue": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}
