@@ -1,0 +1,20 @@
+{
+  "name": "docs",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "vitepress": "catalog:",
+    "vue": "catalog:",
+    "vue-paperpic": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}
