@@ -3,10 +3,10 @@
 Document image viewer & editor: zoom, rotate, perspective correction,
 brightness/contrast, black & white and shadow removal.
 
-| Package | Status |
-|---|---|
+| Package          | Status         |
+| ---------------- | -------------- |
 | `@paperpic/core` | In development |
-| `@paperpic/vue` | In development |
+| `@paperpic/vue`  | In development |
 
 > Work in progress. Not ready for production.
 

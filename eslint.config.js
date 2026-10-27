@@ -3,6 +3,7 @@ import antfu from '@antfu/eslint-config'
 export default antfu({
   vue: true,
   typescript: true,
+  formatters: true,
   pnpm: { catalogs: false },
   ignores: ['**/dist', '**/.vitepress/cache', '**/.vitepress/dist'],
 }, {
