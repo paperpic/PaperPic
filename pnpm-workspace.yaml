@@ -1,0 +1,28 @@
+# Only install versions published at least 24h ago (in minutes)
+minimumReleaseAge: 1440
+
+# Fall back to a newer version when no version meets minimumReleaseAge
+minimumReleaseAgeStrict: false
+
+# Drop minimumReleaseAgeExclude entries the lockfile no longer resolves
+minimumReleaseAgeExcludePrune: true
+
+# Fail if a package's trust level drops compared to previous releases
+trustPolicy: no-downgrade
+
+# Run scripts with pnpm's cross-platform bash-like shell
+shellEmulator: true
+
+# Refuse dependencies whose engines field excludes the current Node version
+engineStrict: true
+
+# Save exact versions, without ^
+savePrefix: ''
+
+packages:
+  - packages/*
+  - apps/*
+
+# Packages allowed (true) or denied (false) to run install scripts
+allowBuilds:
+  esbuild: false
