@@ -8,6 +8,7 @@ Thanks for your interest in contributing. This guide covers how to set up the pr
 - Ask questions in [Discussions](https://github.com/paperpic/paperpic/discussions).
 - Report security problems privately, never in a public issue. See the [security policy](SECURITY.md).
 - For larger changes, open an issue first so we can agree on the approach.
+- By taking part in this project you agree to follow the [code of conduct](CODE_OF_CONDUCT.md).
 
 ## Setup
 
