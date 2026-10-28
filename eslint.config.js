@@ -5,7 +5,13 @@ export default antfu({
   typescript: true,
   formatters: true,
   pnpm: { catalogs: false },
-  ignores: ['**/dist', '**/.vitepress/cache', '**/.vitepress/dist'],
+  ignores: [
+    '**/dist',
+    '**/.vitepress/cache',
+    '**/.vitepress/dist',
+    '.claude/**',
+    '.agents/**',
+  ],
 }, {
   name: 'paperpic/no-pnpm-catalogs',
   files: ['package.json', '**/package.json', 'pnpm-workspace.yaml'],
