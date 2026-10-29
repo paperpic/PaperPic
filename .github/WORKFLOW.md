@@ -130,17 +130,20 @@ Nothing has to be merged back into `development`: the versions were bumped there
 
 ## Automation reference
 
-| What           | When                                       | Does                                                                    |
-| -------------- | ------------------------------------------ | ----------------------------------------------------------------------- |
-| `ci.yml`       | Pushes and PRs on `development` and `main` | `pnpm lint`, `typecheck`, `test`, `build`                               |
-| `pr-title.yml` | PRs into `development`                     | Checks Conventional Commits and a lowercase subject                     |
-| `release.yml`  | Pushes to `development` and `main`         | Version PR on `development`; publish on `main`                          |
-| CodeQL         | PRs and pushes                             | GitHub code scanning                                                    |
-| Dependabot     | Weekly (npm), monthly (actions)            | npm: security fixes only. Actions: version bumps after a 7-day cooldown |
+| What           | When                                       | Does                                                                            |
+| -------------- | ------------------------------------------ | ------------------------------------------------------------------------------- |
+| `ci.yml`       | Pushes and PRs on `development` and `main` | `pnpm lint`, `typecheck`, `test`, `build`                                       |
+| `pr-title.yml` | PRs into `development`                     | Checks Conventional Commits and a lowercase subject                             |
+| `release.yml`  | Pushes to `development` and `main`         | Version PR on `development`; publish on `main`                                  |
+| `audit.yml`    | Mondays, and PRs that change the lockfile  | `pnpm audit --audit-level high` over every dependency, transitive ones included |
+| CodeQL         | PRs and pushes                             | GitHub code scanning                                                            |
+| Dependabot     | Weekly (npm), monthly (actions)            | npm: security fixes only. Actions: version bumps after a 7-day cooldown         |
 
 Every action in a workflow must be pinned to a full commit SHA, and only GitHub-owned actions plus an allowlist can run. A new third-party action needs a repository admin to add it under **Settings → Actions → General**.
 
 When a Dependabot security fix touches a dependency that a published package ships, add a changeset to its PR (usually `patch`).
+
+GitHub's dependency graph does not read pnpm's transitive dependencies, so Dependabot never alerts on them. `audit.yml` covers that gap: when it fails, fix the advisory with a version bump or an `overrides` entry, or accept it in `auditConfig.ignoreGhsas` with a comment saying when to drop it.
 
 ## Dependencies
 
@@ -151,3 +154,4 @@ When a Dependabot security fix touches a dependency that a published package shi
 - Versions are saved exact, without `^`.
 - An install fails if a package's trust level drops compared to its earlier releases.
 - Install scripts are blocked unless a package is allowed in `allowBuilds`.
+- `overrides` forces patched versions of vulnerable transitive dependencies, and `auditConfig.ignoreGhsas` lists the advisories accepted after review.
