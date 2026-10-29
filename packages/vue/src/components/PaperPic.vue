@@ -1,15 +1,7 @@
-<script lang="ts">
-</script>
-
 <script setup lang="ts">
+import type { PaperPicProps } from '../types'
 import { normalizeRotation } from '@paperpic/core'
 import { computed } from 'vue'
-
-export interface PaperPicProps {
-  src: string
-  alt?: string
-  rotation?: number
-}
 
 const props = withDefaults(defineProps<PaperPicProps>(), {
   alt: '',
