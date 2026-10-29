@@ -32,14 +32,15 @@ pnpm install
 
 ## Scripts
 
-| Command          | What it does                                      |
-| ---------------- | ------------------------------------------------- |
-| `pnpm dev`       | Starts the docs site                              |
-| `pnpm test`      | Runs all tests (`pnpm test:watch` for watch mode) |
-| `pnpm typecheck` | Type-checks every package                         |
-| `pnpm lint`      | Runs ESLint and Stylelint                         |
-| `pnpm lint:fix`  | Fixes lint and formatting problems                |
-| `pnpm build`     | Builds every package                              |
+| Command              | What it does                                                             |
+| -------------------- | ------------------------------------------------------------------------ |
+| `pnpm dev`           | Starts the docs site                                                     |
+| `pnpm test`          | Runs all tests (`pnpm test:watch` for watch mode)                        |
+| `pnpm test:coverage` | Runs all tests with a coverage report in `coverage/`                     |
+| `pnpm typecheck`     | Type-checks every package                                                |
+| `pnpm lint`          | Runs ESLint and Stylelint                                                |
+| `pnpm lint:fix`      | Fixes lint and formatting problems                                       |
+| `pnpm build`         | Builds every package and checks each published one with publint and attw |
 
 CI runs lint, typecheck, test and build on every pull request.
 

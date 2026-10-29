@@ -5,4 +5,6 @@ export default defineConfig({
   format: 'esm',
   dts: true,
   clean: true,
+  publint: { level: 'error' },
+  attw: { profile: 'esm-only', level: 'error' },
 })

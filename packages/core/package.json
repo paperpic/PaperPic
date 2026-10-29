@@ -23,7 +23,8 @@
     ".": {
       "types": "./dist/index.d.mts",
       "import": "./dist/index.mjs"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "files": [
     "dist"
@@ -36,6 +37,8 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@arethetypeswrong/core": "0.18.5",
+    "publint": "0.3.25",
     "tsdown": "0.23.2",
     "typescript": "6.0.3"
   }

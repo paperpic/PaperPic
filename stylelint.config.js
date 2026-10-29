@@ -1,4 +1,9 @@
 export default {
   extends: ['stylelint-config-standard', 'stylelint-config-standard-vue'],
-  ignoreFiles: ['**/dist/**', '**/.vitepress/cache/**', '**/.vitepress/dist/**'],
+  ignoreFiles: [
+    '**/dist/**',
+    '**/coverage/**',
+    '**/.vitepress/cache/**',
+    '**/.vitepress/dist/**',
+  ],
 }

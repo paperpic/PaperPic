@@ -6,17 +6,6 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  build: {
-    lib: {
-      entry: 'src/index.ts',
-      formats: ['es'],
-      fileName: 'index',
-      cssFileName: 'style',
-    },
-    rollupOptions: {
-      external: ['vue', '@paperpic/core'],
-    },
-  },
   test: {
     environment: 'happy-dom',
     alias: {
