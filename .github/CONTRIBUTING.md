@@ -64,6 +64,6 @@ CI runs lint, typecheck, test and build on every pull request.
 
 ## Pull requests
 
-- The title must follow Conventional Commits, and its subject must not start with an uppercase letter. A check validates it.
+- The title must follow Conventional Commits, and its subject must not start with an uppercase letter. A check validates it, and a workflow adds the type's [gitmoji](https://gitmoji.dev) after the colon, so you never type it.
 - Pull requests are squash merged, so the title becomes the commit message in `development`.
 - All checks must pass and all review threads must be resolved before merging.

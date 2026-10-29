@@ -23,7 +23,7 @@ There is no hotfix branch: fixes follow the same path as any other change.
    - `pre-commit` runs lint-staged, which fixes ESLint and Stylelint problems in the staged files.
    - `commit-msg` runs commitlint. It rejects messages that break the convention, and body lines over 100 characters.
 3. **Add a changeset** if the change affects `@paperpic/core` or `@paperpic/vue`. See [Changesets](#changesets).
-4. **Open a pull request against `development`.** Fill in the template. The title must follow Conventional Commits with a lowercase subject, for example `feat(vue): add zoom controls`.
+4. **Open a pull request against `development`.** Fill in the template. The title must follow Conventional Commits with a lowercase subject, for example `feat(vue): add zoom controls`. The `emoji` job then adds the type's [gitmoji](https://gitmoji.dev) after the colon (`feat(vue): ✨ add zoom controls`) and swaps it when the type changes. PRs from forks and Dependabot keep the plain title, since their token cannot edit it.
 5. **Get it merged.** `development` requires:
    - the `ci` check (lint, typecheck, test, build) and the `pr-title` check, on a branch that is up to date with `development`;
    - one approval from a code owner (`@Unlooper`, see [CODEOWNERS](CODEOWNERS)); a new push dismisses earlier approvals;
@@ -135,7 +135,7 @@ Nothing has to be merged back into `development`: the versions were bumped there
 | What                   | When                                        | Does                                                                            |
 | ---------------------- | ------------------------------------------- | ------------------------------------------------------------------------------- |
 | `ci.yml`               | Pushes and PRs on `development` and `main`  | `pnpm lint`, `typecheck`, `test`, `build`                                       |
-| `pr-title.yml`         | PRs into `development`                      | Checks Conventional Commits and a lowercase subject                             |
+| `pr-title.yml`         | PRs into `development`                      | Checks Conventional Commits and a lowercase subject; adds the type's gitmoji    |
 | `release.yml`          | Pushes to `development` and `main`          | Version PR on `development`; publish on `main`                                  |
 | `audit.yml`            | Mondays, and PRs that change the lockfile   | `pnpm audit --audit-level high` over every dependency, transitive ones included |
 | `changeset-status.yml` | PRs into `development` from this repository | Comments whether the PR has a changeset and which packages it releases          |
